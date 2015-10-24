@@ -1,26 +1,34 @@
 package com.example.administrator.hello;
 
 import android.content.Intent;
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.webkit.WebView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.graphics.drawable.Drawable;
+import android.widget.RelativeLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
    private ImageButton b1,b2,b3;
+    private WebView gif1,gif2,gif3;
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LinearLayout main = (LinearLayout) findViewById(R.id.root);
+        RelativeLayout main = (RelativeLayout) findViewById(R.id.root);
+
+        gif1 = (WebView)this.findViewById(R.id.webView1);
+        gif1.setBackgroundColor(0);
+        gif1.loadDataWithBaseURL(null, "<img src='file:///android_asset/easy2.gif'>", "text/html", "utf-8", null);
+
+
+        gif2 = (WebView)this.findViewById(R.id.webView2);
+        gif2.setBackgroundColor(0);
+        gif2.loadDataWithBaseURL(null, "<img src='file:///android_asset/hardmode2.gif'>", "text/html", "utf-8", null);
+
+        gif3 = (WebView)this.findViewById(R.id.webView3);
+        gif3.setBackgroundColor(0);
+        gif3.loadDataWithBaseURL(null, "<img src='file:///android_asset/entertain2.gif'>", "text/html", "utf-8", null);
 
         b1= (ImageButton) findViewById(R.id.easybutton);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -52,30 +60,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-   // public void clickHandler(android.view.View source){
-    //    TextView tv =(TextView) findViewById(R.id.show);
-      //  tv.setText("Hello Android-" + new java.util.Date());
-   // }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
 }

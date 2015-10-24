@@ -4,22 +4,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:icon="@drawable/icon1"
+        android:label="@string/app_name">
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
             android:name=".EasyActivity"
-            android:label="Easymode">
+            android:label="">
             <intent-filter>
                 <action android:name="com.litreily.Easymode"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -28,7 +29,7 @@
 
         <activity
             android:name=".EntertainActivity"
-            android:label="Entertain">
+            android:label="">
             <intent-filter>
                 <action android:name="com.litreily.Entertain"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -37,7 +38,7 @@
 
         <activity
             android:name=".HardActivity"
-            android:label="Hardmode">
+            android:label="">
             <intent-filter>
                 <action android:name="com.litreily.Hardmode"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -46,7 +47,7 @@
 
         <activity
             android:name=".VideoplayActivity"
-            android:label="Videoplay">
+            android:label="">
             <intent-filter>
                 <action android:name="com.litreily.Videoplay"/>
                 <category android:name="android.intent.category.DEFAULT"/>

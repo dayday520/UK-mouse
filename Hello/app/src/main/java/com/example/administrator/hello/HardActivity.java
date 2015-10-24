@@ -3,7 +3,7 @@ package com.example.administrator.hello;
 
         import android.content.Intent;
         import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
+        import android.app.Activity;
         import android.view.View;
         import android.widget.ImageButton;
 
@@ -11,7 +11,7 @@ package com.example.administrator.hello;
  * Created by Administrator on 2015/10/2.
  */
 
-public class HardActivity extends AppCompatActivity {
+public class HardActivity extends Activity {
     private ImageButton b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

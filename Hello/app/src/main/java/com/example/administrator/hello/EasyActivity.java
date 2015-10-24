@@ -2,7 +2,7 @@ package com.example.administrator.hello;
 
 import android.gesture.GestureOverlayView;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,7 +15,7 @@ import android.app.Activity;
  * Created by Administrator on 2015/10/2.
  */
 
-    public class EasyActivity extends AppCompatActivity implements GestureDetector.OnGestureListener {
+    public class EasyActivity extends Activity implements GestureDetector.OnGestureListener {
     ViewFlipper flipper;
     GestureDetector detector;
     Animation [] animations =new Animation[4];
@@ -56,15 +56,15 @@ import android.app.Activity;
             // 为flipper设置切换的的动画效果
             flipper.setInAnimation(animations[0]);
             flipper.setOutAnimation(animations[1]);
-            flipper.showPrevious();
+            flipper.showNext();
             return true;
         }
         // 如果第二个触点事件的X坐标大于第一个触点事件的X坐标超过FLIP_DISTANCE
         // 也就是手势从左向右滑
         else if(event2.getX()-event1.getX()>FLIP_DISTANCE){
             flipper.setInAnimation(animations[2]);
-            flipper.setInAnimation(animations[3]);
-            flipper.showNext();
+            flipper.setOutAnimation(animations[3]);
+            flipper.showPrevious();
             return true;
         }
         return false;
