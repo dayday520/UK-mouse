@@ -56,7 +56,7 @@ import android.app.Activity;
             // 为flipper设置切换的的动画效果
             flipper.setInAnimation(animations[0]);
             flipper.setOutAnimation(animations[1]);
-            flipper.showNext();
+            flipper.showPrevious();
             return true;
         }
         // 如果第二个触点事件的X坐标大于第一个触点事件的X坐标超过FLIP_DISTANCE
@@ -64,7 +64,7 @@ import android.app.Activity;
         else if(event2.getX()-event1.getX()>FLIP_DISTANCE){
             flipper.setInAnimation(animations[2]);
             flipper.setOutAnimation(animations[3]);
-            flipper.showPrevious();
+            flipper.showNext();
             return true;
         }
         return false;
