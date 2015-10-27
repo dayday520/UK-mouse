@@ -28,13 +28,36 @@ import android.app.Activity;
         //创建手势检测器
         detector = new GestureDetector(this, this);
         flipper=(ViewFlipper) this.findViewById(R.id.flipper);
-        //为ViewFlipper添加5个ImageView组件
+        //为ViewFlipper添加27个ImageView组件
+        flipper.addView(addImageView(R.drawable.abcd));
         flipper.addView(addImageView(R.drawable.a));
         flipper.addView(addImageView(R.drawable.b));
         flipper.addView(addImageView(R.drawable.c));
         flipper.addView(addImageView(R.drawable.d));
         flipper.addView(addImageView(R.drawable.e));
         flipper.addView(addImageView(R.drawable.f));
+        flipper.addView(addImageView(R.drawable.g));
+        flipper.addView(addImageView(R.drawable.h));
+        flipper.addView(addImageView(R.drawable.i));
+        flipper.addView(addImageView(R.drawable.j));
+        flipper.addView(addImageView(R.drawable.k));
+        flipper.addView(addImageView(R.drawable.l));
+        flipper.addView(addImageView(R.drawable.m));
+        flipper.addView(addImageView(R.drawable.n));
+        flipper.addView(addImageView(R.drawable.o));
+        flipper.addView(addImageView(R.drawable.p));
+        flipper.addView(addImageView(R.drawable.q));
+        flipper.addView(addImageView(R.drawable.l));
+        flipper.addView(addImageView(R.drawable.s));
+        flipper.addView(addImageView(R.drawable.t));
+        flipper.addView(addImageView(R.drawable.u));
+        flipper.addView(addImageView(R.drawable.v));
+        flipper.addView(addImageView(R.drawable.w));
+        flipper.addView(addImageView(R.drawable.x));
+        flipper.addView(addImageView(R.drawable.y));
+        flipper.addView(addImageView(R.drawable.z));
+
+
         //初始化Animation数组
         animations[0]= AnimationUtils.loadAnimation(this,R.anim.left_in);
         animations[1] = AnimationUtils.loadAnimation(this, R.anim.left_out);

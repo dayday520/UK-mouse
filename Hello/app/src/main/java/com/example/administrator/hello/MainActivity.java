@@ -2,15 +2,18 @@ package com.example.administrator.hello;
 
 import android.content.Intent;
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends Activity {
-   private ImageButton b1,b2,b3;
+   private Button b1,b2,b3;
     private WebView gif1,gif2,gif3;
+    // 播放背景音乐的MediaPlayer
+    private MediaPlayer player;
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -30,7 +33,7 @@ public class MainActivity extends Activity {
         gif3.setBackgroundColor(0);
         gif3.loadDataWithBaseURL(null, "<img src='file:///android_asset/entertain2.gif'>", "text/html", "utf-8", null);
 
-        b1= (ImageButton) findViewById(R.id.easybutton);
+        b1= (Button) findViewById(R.id.easybutton);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +42,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        b2= (ImageButton) findViewById(R.id.hardbutton);
+        b2= (Button) findViewById(R.id.hardbutton);
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,12 +51,24 @@ public class MainActivity extends Activity {
             }
         });
 
-        b3= (ImageButton) findViewById(R.id.entertainbutton);
+        b3= (Button) findViewById(R.id.entertainbutton);
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent3=new Intent(MainActivity.this,EntertainActivity.class);
                 startActivity(intent3);
+            }
+        });
+        // 播放背景音乐
+        player = MediaPlayer.create(this, R.raw.hellomusic);
+        //设置背景音乐循环player.setLooping(true);
+
+        player.start();
+        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            public void onCompletion(MediaPlayer mp) {
+                //播完了接着播或者关闭mMediaPlayer
+                player.stop();
+                player.release();
             }
         });
     }
