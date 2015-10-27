@@ -13,7 +13,7 @@ package com.example.administrator.hello;
 
 
 public class HardActivity extends Activity implements OnClickListener {
-    private Button play, pause, stop;
+    private Button play, pause, back;
     MediaPlayer mPlayer;
     int position;
 
@@ -24,17 +24,17 @@ public class HardActivity extends Activity implements OnClickListener {
         setContentView(R.layout.hardmode);
         GifView aaa = (GifView)findViewById(R.id.gif2);
         aaa.setGifImage(R.drawable.cute);
-//        WebView mouse =(WebView)findViewById(R.id.aaa);
-//        mouse.setBackgroundColor(0);
-//        mouse.loadDataWithBaseURL(null, "<img src='file:///android_asset/aaa.gif'>", "text/html", "utf-8", null);
+        WebView mouse =(WebView)findViewById(R.id.aaa);
+        mouse.setBackgroundColor(0);
+        mouse.loadDataWithBaseURL(null, "<img src='file:///android_asset/aaa.gif'>", "text/html", "utf-8", null);
         //获取界面中的三个按钮
 //        play = (Button) findViewById(R.id.play);
         pause = (Button) findViewById(R.id.pause);
-        stop = (Button) findViewById(R.id.stop);
+        back = (Button) findViewById(R.id.back);
         //为三个按钮的单击事件绑定事件监听器
 //        play.setOnClickListener(this);
         pause.setOnClickListener(this);
-        stop.setOnClickListener(this);
+        back.setOnClickListener(this);
         //创建MediaPlayer并找到音频
         mPlayer = MediaPlayer.create(this, R.raw.abc);
         mPlayer.start();
@@ -61,8 +61,8 @@ public class HardActivity extends Activity implements OnClickListener {
                     }
                     break;
                 //停止按钮被单击
-                case R.id.stop:
-                    this.finish();
+                case R.id.back:
+                    finish();
                     mPlayer.release();
                     break;
             }
@@ -70,6 +70,11 @@ public class HardActivity extends Activity implements OnClickListener {
         catch (Exception e){
             e.printStackTrace();
         }
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        mPlayer.release();
     }
 }

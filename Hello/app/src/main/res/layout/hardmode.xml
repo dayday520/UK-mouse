@@ -16,29 +16,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/blue"
-        android:layout_below="@+id/stop"
-        />
+        android:layout_below="@+id/back"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <Button
-        android:id="@+id/stop"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/purple"
         android:layout_alignParentTop="true"
-        />
+        android:layout_alignParentLeft="true" />
 
     <com.ant.liao.GifView
         android:id="@+id/gif2"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_marginLeft="100dp"
-        />
-    <!--<WebView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/aaa"-->
-        <!--android:layout_gravity="center"-->
-        <!--android:focusable="false"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--/>-->
+        android:layout_alignParentRight="true" />
+
+    <WebView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aaa"
+        android:focusable="false"
+        android:layout_alignParentBottom="true"
+     />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alphabet"
+        android:src="@drawable/alphabet"
+        android:layout_toEndOf="@+id/pause"
+        android:layout_above="@+id/aaa"
+        android:layout_toRightOf="@+id/pause" />
 </RelativeLayout>
