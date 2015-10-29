@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/full_content" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#0099cc"
+    tools:context="com.ygls.zlw.ygls.Welcome">
+
+    <com.ant.liao.GifView
+        android:id="@+id/gif_font" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" android:drawable="@drawable/gif_font"
+        android:gravity="center"
+        />
+
+    <com.ant.liao.GifView
+        android:id="@+id/gif_img1" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" android:drawable="@drawable/gif_img1"
+        android:gravity="center"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <com.ant.liao.GifView
+        android:id="@+id/gif_img2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawable="@drawable/gif_img2"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="100dp" />
+
+    <com.ant.liao.GifView
+        android:id="@+id/gif_img3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawable="@drawable/gif_img3"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="10dp"
+        />
+
+    <com.ant.liao.GifView
+        android:id="@+id/gif_img4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawable="@drawable/gif_img4"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="90dp" />
+
+    <com.ant.liao.GifView
+        android:id="@+id/gif_img5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawable="@drawable/gif_img5"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="10dp" />
+
+
+</FrameLayout>
+

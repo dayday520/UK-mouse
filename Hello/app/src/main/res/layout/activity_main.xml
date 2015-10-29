@@ -23,7 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/entertainbutton"
         android:layout_alignStart="@+id/entertainbutton"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="220dp" />
 
     <Button
         android:layout_width="250dp"

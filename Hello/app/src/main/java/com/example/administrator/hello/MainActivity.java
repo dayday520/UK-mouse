@@ -12,8 +12,7 @@ import android.widget.RelativeLayout;
 public class MainActivity extends Activity {
    private Button b1,b2,b3;
     private WebView gif1,gif2,gif3;
-    // 播放背景音乐的MediaPlayer
-    private MediaPlayer player;
+
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -59,18 +58,9 @@ public class MainActivity extends Activity {
                 startActivity(intent3);
             }
         });
-        // 播放背景音乐
-        player = MediaPlayer.create(this, R.raw.hellomusic);
-        //设置背景音乐循环player.setLooping(true);
 
-        player.start();
-        player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            public void onCompletion(MediaPlayer mp) {
-                //播完了接着播或者关闭mMediaPlayer
-                player.stop();
-                player.release();
-            }
-        });
+
+
     }
 
 

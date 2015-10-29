@@ -37,25 +37,25 @@ import android.app.Activity;
         flipper.addView(addImageView(R.drawable.e));
         flipper.addView(addImageView(R.drawable.f));
         flipper.addView(addImageView(R.drawable.g));
-        flipper.addView(addImageView(R.drawable.h));
-        flipper.addView(addImageView(R.drawable.i));
-        flipper.addView(addImageView(R.drawable.j));
-        flipper.addView(addImageView(R.drawable.k));
-        flipper.addView(addImageView(R.drawable.l));
-        flipper.addView(addImageView(R.drawable.m));
-        flipper.addView(addImageView(R.drawable.n));
-        flipper.addView(addImageView(R.drawable.o));
-        flipper.addView(addImageView(R.drawable.p));
-        flipper.addView(addImageView(R.drawable.q));
-        flipper.addView(addImageView(R.drawable.l));
-        flipper.addView(addImageView(R.drawable.s));
-        flipper.addView(addImageView(R.drawable.t));
-        flipper.addView(addImageView(R.drawable.u));
-        flipper.addView(addImageView(R.drawable.v));
-        flipper.addView(addImageView(R.drawable.w));
-        flipper.addView(addImageView(R.drawable.x));
-        flipper.addView(addImageView(R.drawable.y));
-        flipper.addView(addImageView(R.drawable.z));
+//        flipper.addView(addImageView(R.drawable.h));
+//        flipper.addView(addImageView(R.drawable.i));
+//        flipper.addView(addImageView(R.drawable.j));
+////        flipper.addView(addImageView(R.drawable.k));
+////        flipper.addView(addImageView(R.drawable.l));
+//        flipper.addView(addImageView(R.drawable.m));
+////        flipper.addView(addImageView(R.drawable.n));
+//        flipper.addView(addImageView(R.drawable.o));
+//        flipper.addView(addImageView(R.drawable.p));
+//        flipper.addView(addImageView(R.drawable.q));
+//        flipper.addView(addImageView(R.drawable.l));
+//        flipper.addView(addImageView(R.drawable.s));
+//        flipper.addView(addImageView(R.drawable.t));
+//        flipper.addView(addImageView(R.drawable.u));
+//        flipper.addView(addImageView(R.drawable.v));
+//        flipper.addView(addImageView(R.drawable.w));
+//        flipper.addView(addImageView(R.drawable.x));
+//        flipper.addView(addImageView(R.drawable.y));
+//        flipper.addView(addImageView(R.drawable.z));
 
 
         //初始化Animation数组
@@ -79,7 +79,7 @@ import android.app.Activity;
             // 为flipper设置切换的的动画效果
             flipper.setInAnimation(animations[0]);
             flipper.setOutAnimation(animations[1]);
-            flipper.showPrevious();
+            flipper.showNext();
             return true;
         }
         // 如果第二个触点事件的X坐标大于第一个触点事件的X坐标超过FLIP_DISTANCE
@@ -87,7 +87,7 @@ import android.app.Activity;
         else if(event2.getX()-event1.getX()>FLIP_DISTANCE){
             flipper.setInAnimation(animations[2]);
             flipper.setOutAnimation(animations[3]);
-            flipper.showNext();
+            flipper.showPrevious();
             return true;
         }
         return false;
